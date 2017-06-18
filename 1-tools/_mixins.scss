@@ -1,0 +1,50 @@
+
+
+
+// ----------- ALIGNMENT IN PARENT -----------
+@mixin center($axis:'xy'){
+  @if $axis == 'x'{
+    left: 50%;
+    transform: translateX(-50%);
+  } @else if $axis=='y'{
+    top: 50%;
+    transform: translateY(-50%);
+  } @else{
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+@mixin box-shadow($size:'') {
+  @if $size == 'm' {
+    box-shadow: $box-shadow-medium;
+  } @else if $size == 'l' {
+    box-shadow: $box-shadow-large;
+  } @else {
+    box-shadow: $box-shadow-small;
+  }
+}
+
+// ----------- MEDIA QUERIES -----------
+@mixin for-phone-only {
+  @media (max-width: $for-phone-only) { @content; }
+}
+@mixin for-phone-big-and-up {
+  @media (min-width: $for-phone-big-and-up) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: $for-tablet-portrait-and-up) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: $for-tablet-landscape-and-up) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: $for-desktop-and-up) { @content; }
+}
+@mixin for-desktop-big-up {
+  @media (min-width: $for-desktop-big-and-up) { @content; }
+}
+@mixin for-custom-media($min, $max) {
+  @media (min-width: $min) and (max-width: $max) { @content; }
+}

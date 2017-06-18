@@ -1,0 +1,27 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(#{$root}/icons/symbol-defs.svg);
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  vertical-align: middle;
+  font-size: 26px;
+
+
+  .top-bar &{
+    color: $colorBrand;
+    margin-right: 8px;
+    font-size: 40px;
+  }
+  .nav-main &{
+    font-size: 12px;
+  }
+}
+.icon-grexonlogo2 {
+  width: 4.8544921875em;
+}
+
+

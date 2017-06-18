@@ -1,0 +1,87 @@
+main{
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  //padding: 0.5rem 0;
+
+
+
+}
+.main__block{
+  flex: 0 0 100%;
+  margin: 3rem 0;
+  &.dual{
+    background: url(/res/images/site/couple.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 20rem;
+  }
+  &.features{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+  }
+  & > p{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
+
+
+.preview-container{
+  flex:0 0 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.hero{
+  flex: 1 0 30rem;
+  height:0;
+  padding-bottom: 100%;
+  background: white no-repeat center;
+  background-size: contain;
+}
+
+.content{
+  width: 65%;
+  margin: 0 auto;
+}
+
+
+@media screen and (min-width: 650px){
+  .hero{
+    flex: 0 1 calc(50% - 0.5rem);
+    padding-bottom: 50%;
+    margin-right: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .main__block {
+    p {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &.features{
+      justify-content: space-between;
+    }
+  }
+}
+
+
+
+
+@media screen and (min-width: 1280px){
+
+  main{
+    justify-content: space-between;
+    //padding-right: 3rem;
+    //max-width: 1280px;
+    //margin: 0 auto;
+  }
+}
+
+

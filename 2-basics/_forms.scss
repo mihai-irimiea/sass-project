@@ -1,0 +1,80 @@
+
+
+
+input, textarea{
+  padding: 10px;
+  //width: 100%;
+  font-family: $fontSecondary;
+  margin: 10px 0;
+
+}
+
+
+
+form{
+  &.cta{
+    position: relative;
+    padding: 0 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    input{
+      margin-bottom: 5px;
+    }
+  }
+  &.contact_form, &.comment_form{
+    input{
+      width: 100%;
+    }
+    textarea{
+      width: 100%;
+    }
+
+  }
+  &.comment_form{
+    margin-left: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+.form-feedback{
+  //background-color: $colorAccent;
+  //color: white;
+  font-size: 20px;
+  padding: 10px;
+  em{
+    font-weight: bold;
+  }
+  &__err{
+    background-color: $orange;
+  }
+}
+#form-messages{
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.3s;
+  //background-color: $colorAccent;
+  //color: white;
+  font-size: 20px;
+  &.visible{
+    transform: scale(1);
+    opacity: 1;
+    border: 1px solid $colorAccent;
+  }
+}
+
+///* Change Autocomplete styles in Chrome*/
+//input:-webkit-autofill,
+//input:-webkit-autofill:hover,
+//input:-webkit-autofill:focus
+//input:-webkit-autofill,
+//textarea:-webkit-autofill,
+//textarea:-webkit-autofill:hover
+//textarea:-webkit-autofill:focus,
+//select:-webkit-autofill,
+//select:-webkit-autofill:hover,
+//select:-webkit-autofill:focus {
+//  //border: 1px solid rgba(0,0,0,0.4);
+//  -webkit-text-fill-color: $colorBlack;
+//  -webkit-box-shadow: 0 0 0px 1000px #f5ffd7 inset;
+//  transition: background-color 5000s ease-in-out 0s;
+//}

@@ -1,0 +1,54 @@
+
+.jumbotron {
+
+  text-align: center;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  @include center();
+  width: 90%;
+  z-index: 2;
+
+  &__title{
+    display: inline-block;
+    padding: 10px;
+    font-family: $fontSecondary;
+    font-size: 30px;
+    //color: $colorBrand;
+    background-color: rgba(0,0,0,0.1);
+  }
+
+  &__content {
+    display: inline-block;
+    padding: 10px;
+    //background-color: rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    border-right: 5px;
+  }
+}
+
+
+@include for-tablet-portrait-up() {
+
+  .jumbotron {
+    //border: 1px solid black;
+    //display: flex;
+    position: absolute;
+    padding: 0 30px;
+    min-width: 1%;
+    align-items: center;
+    justify-content: center;
+    &__title {
+      font-size: 45px;
+    }
+  }
+}
+
+@include for-desktop-up() {
+  .jumbotron {
+    padding: 30px;
+    &__title {
+      font-size: 55px;
+    }
+  }
+}

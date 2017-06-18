@@ -1,0 +1,106 @@
+
+
+.jumbotron-dual{
+  //border: 1px solid black;
+  color: white;
+  text-align: center;
+
+
+  &__container{
+    //border: 1px solid red;
+    background-color: rgba(0,0,0,0.4);
+    margin: 20px 10px;
+    padding-bottom: 20px;
+  }
+  &__content{
+    //text-align: left;
+    background-color: rgba(0,0,0,0.6);
+    //border: 1px solid red;
+    margin: 20px 10px;
+    padding: 20px 0;
+  }
+  &__title{
+    padding: 10px;
+    font-size: 25px;
+    line-height: 1.15;
+    font-family: $fontSecondary;
+    //font-weight: bold;
+    letter-spacing: 1px;
+    //text-align: center;
+
+  }
+  &__subtitle{
+    padding: 0 10px;
+    font-family: $fontSecondary;
+    font-size: 17px;
+    line-height: 1.15;
+    text-align: center;
+
+  }
+  &__text{
+    //color: #e9e9e9;
+    padding: 0 20px;
+    font-size: 18px;
+    font-style: italic;
+
+  }
+  &__image{
+    position: relative;
+    transition: transform 1s;
+    &:hover{
+      transform: translate3d(20px,0,0);
+    }
+  }
+}
+
+@include for-tablet-portrait-up(){
+  .jumbotron-dual{
+    &__container, &__content{
+      margin: 40px;
+    }
+    &__title{
+      padding: 10px;
+      font-size: 55px;
+    }
+    &__subtitle{
+      padding: 0 40px;
+      font-size: 35px;
+    }
+  }
+}
+
+@include for-tablet-landscape-up(){
+  .jumbotron-dual{
+    display: flex;
+    justify-content: space-between;
+    &__title{
+      font-size: 48px;
+    }
+    &__container{
+      flex: 0 0 34%;
+    }
+    &__content{
+      background-color: rgba(0,0,0,0.15);
+      flex: 0 0 52%;
+    }
+  }
+}
+@include for-desktop-up(){
+  .jumbotron-dual{
+    align-items: flex-start;
+    //position: absolute;
+    //max-width: 1366px;
+    //@include center(y);
+    &__content{
+      text-align: left;
+      background-color: transparent;
+    }
+    &__title{
+      font-size: 60px;
+    }
+    &__text{
+      //background-color: rgba(0,0,0,0.15);
+    }
+
+  }
+}

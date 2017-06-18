@@ -1,0 +1,91 @@
+
+
+
+.flash{
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 100;
+  background-color: white;
+  &__close{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 34px;
+    color: white;
+    right: 10px;
+    top: 5px;
+    bottom: 5px;
+
+  }
+
+}
+
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.pull-right {
+  float: right;
+}
+.no-top-margin{
+  margin-top: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-justify{
+  text-align: justify;
+}
+
+.text-brand {
+  color: $colorBrand;
+}
+.text-accent{
+  color: $colorAccent;
+}
+.text-italic{
+  font-style: italic;
+}
+
+.line-vert{
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  border-right: 1px solid rgba(255,255,255,0.9);
+  margin: 0 15px;
+  vertical-align: middle;
+  .header &{
+    display: none;
+  }
+}
+
+.line{
+  display: block;
+  width: 100px;
+  height: 1px;
+  background-color: white;
+  margin: 15px auto;
+
+}
+
+
+@include  for-tablet-portrait-up(){
+ .line-vert{
+   font-size: 32px;
+   .header &{
+     display: inline-block;
+   }
+ }
+}
+

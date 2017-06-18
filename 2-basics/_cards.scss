@@ -1,0 +1,94 @@
+.card-deck{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  .container > &{
+    margin-left: -15px;
+    margin-right: -15px;
+
+  }
+}
+
+
+
+.card{
+  position: relative;
+  margin-bottom: 30px;
+  &__content{
+    border: 1px solid #ececec;
+    padding: 10px 10px 20px 10px;
+  }
+  img{
+    vertical-align: middle;
+  }
+  a {
+    display: inline-block;
+    &:hover{
+      .post__title, h2, h3{
+        color: darken($colorBrand,5);
+      }
+    }
+  }
+
+  &__title, h2, h3{
+
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    height: 45px;
+    overflow: hidden;
+  }
+  &__info{
+    font-size: 12px;
+    color: $colorBlack-light;
+    margin-bottom: 15px;
+  }
+  &__body{
+    height: 80px;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  &--simple{
+    flex: 0 0 94%;
+    background-color: white;
+    padding: 15px 30px;
+    text-align: center;
+    border: 1px solid $colorBrand;
+    .icon{
+      font-size: 70px;
+      color: $colorBrand;
+      margin: 15px 0;
+    }
+    .card__title, h2, h3{
+      font-weight: bold;
+      height: auto;
+      text-transform: uppercase;
+    }
+    .card__body{
+      height: 85px;
+      //overflow: auto;
+      //text-align: left;
+      //margin-bottom: 0;
+    }
+  }
+}
+
+@include for-phone-big-and-up(){
+  .card-deck{
+    justify-content: space-around;
+  }
+
+  .card{
+    &--simple{
+      flex: 0 0 45%;
+    }
+  }
+
+}
+
+@include for-desktop-up(){
+  .card{
+    &--simple{
+      flex: 0 0 23%;
+    }
+  }
+}

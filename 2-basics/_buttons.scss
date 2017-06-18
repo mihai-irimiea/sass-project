@@ -1,0 +1,103 @@
+
+.btn{
+  display: inline-block;
+  border-radius: 1px;
+  border: none;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.2s;
+  color: white;
+  margin: 1rem 0;
+  padding: 12px 15px;
+  //font-family: $fontPrimary;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: $colorBrand;
+  outline: none;
+  cursor: pointer;
+  &:active, &:hover{
+    transition-delay: 0s;
+    background-color: darken($colorBrand, 5);
+    color: white;
+  }
+  &--default{
+    background-color: white;
+    color: $colorBlack;
+    &:hover{
+      background-color: $colorBlack;
+      color: white;
+    }
+  }
+  &--dark{
+    background-color: $colorBlack;
+    &:hover{
+      background-color: lighten($colorBlack,5);
+    }
+  }
+  &--cta{
+    background-color: $colorAccent;
+    font-weight: 700;
+    &:hover{
+      background-color: darken($colorAccent,5);
+      color: white;
+
+    }
+    @include for-tablet-portrait-up(){
+      font-size: 20px;
+    }
+  }
+  &.center{
+    position: relative;
+    @include center(x);
+  }
+  &--search{
+    padding: 5px 15px;
+    margin: 0 0 0 3px;
+    background-color: transparent;
+    color: $colorBlack;
+    box-shadow: none;
+    border: 1px solid $colorGrey;
+    &:hover,&:active{
+      background-color: $colorAccent;
+    }
+    @include for-tablet-portrait-up(){
+      //color: white;
+      background-color: rgba(255,255,255,0.4);
+      border: none;
+    }
+  }
+
+  &--worker{
+    position: relative;
+
+    &:hover{
+      &:before{
+        transform: translate3d(50px,0,0);
+        color: white;
+        //z-index: 1;
+      }
+    }
+    &:before{
+      content:'';
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      background: url(#{$root}/icons/sleepy-worker-at-work.svg) no-repeat center;
+      background-size: cover;
+      transition: all 1s;
+      z-index: -1;
+    }
+  }
+  .icon, span{
+    vertical-align: middle;
+  }
+  .icon{
+    font-size: 24px;
+  }
+}

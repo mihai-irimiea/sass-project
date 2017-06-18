@@ -1,0 +1,124 @@
+
+
+
+.c-services{
+  position: relative;
+  text-align: center;
+  padding: 30px 20px;
+  margin: 20px 0;
+  color: rgba(255,255,255,0.9);
+  background-color: rgba(0,0,0,0.7);
+  //color: $colorBlack;
+
+  &__title, h2, h3{
+    position: relative;
+    padding: 0 10px 30px 10px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    //letter-spacing: 2px;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+
+    &:after{
+      display: block;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      @include center(x);
+      width: 30px;
+      height: 5px;
+      background-color: $colorAccent;
+    }
+  }
+  .icon{
+    font-size: 40px;
+    //color: $colorGrey;
+  }
+  &__subtitle{
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 10px 10px 10px;
+    margin-bottom: 10px;
+    &:after{
+      display: block;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      @include center(x);
+      width: 30px;
+      height: 5px;
+      background-color: $colorAccent;
+    }
+  }
+  &__item{
+    margin-bottom: 20px;
+  }
+  &:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    background: url(#{$root}/images/services3-tall.jpg) no-repeat center;
+    background-size: cover;
+
+  }
+
+}
+
+@include for-tablet-portrait-up(){
+
+  .c-services{
+    //background-image: url(#{$root}/images/bg-desk.png);
+    padding: 40px 0;
+    &__title, h2{
+      margin-bottom: 60px;
+      font-size: 40px;
+    }
+    &__list{
+      display: flex;
+      flex-flow: row wrap;
+
+    }
+    &__item{
+      flex: 0 0 33.33%;
+      //border: 1px solid white;
+      margin-bottom: 0;
+      padding: 30px 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      border-right: 1px solid rgba(255,255,255,0.3);
+      &:nth-child(3), &:nth-child(6){
+        border-right: none;
+      }
+      &:nth-child(n+4){
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+@include for-tablet-landscape-up(){
+  .c-services{
+    //padding: 80px 0;
+    &:before{
+      background-image: url(#{$root}/images/shutterstock_264986723.jpg);
+      background-position: center bottom;
+    }
+  }
+}
+
+@include for-desktop-up(){
+  .c-services{
+    &__title, h2{
+      font-size: 50px;
+    }
+  }
+}

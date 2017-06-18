@@ -1,0 +1,80 @@
+@import '1-tools/colours';
+
+// ---------- RESOURCES ROOT ----------
+
+
+
+
+//$root : '/theme/Innovation/assets';
+$root : '';
+//$root : '/aldershot/theme/Innovation/assets';
+
+$mainroot: '/';
+//$main-root: '/aldershot/';
+
+// ---------- WEBSITE COLOR DESIGN ----------
+$colorBrand: #48c7ec;
+//$colorAccent: #4d9f71;
+//$colorAccent: #4CAF50;
+$colorAccent: #FF851B;
+$colorBlack: #10252e;
+$colorBlack2: #1A1E21;
+$colorBlack3: #15191f;
+$colorBlack-light: #4a5f6a;
+$baseFontColor: #506267;
+//$colorGrey: #eceff1;
+$colorGrey: #fafafa;
+$colorBgTransparent: rgba(0,0,0,0.05);
+$colorGrey-dark: #9e9e9e;
+
+
+$colorAlertDanger-light: #eed0c3;
+$colorAlertDanger: #d34836;
+
+// ---------- FONTS ----------
+$fontMain: 'Open Sans', sans-serif;
+$fontSecondary: 'Montserrat', sans-serif;
+$fontSecondary-weight: normal;
+$baseFontSize: 15px;
+$baseLineHeight: 1.4;
+
+
+
+// ---------- CONTAINER MAX WIDTH ----------
+$container-max-width : 1200px;
+
+// ---------- MEDIA QUERIES BREAKPOINTS ----------
+
+
+$for-phone-only: 479px;
+$for-phone-big-and-up: 480px;
+$for-tablet-portrait-and-up: 765px;
+$for-tablet-landscape-and-up: 960px;
+$for-desktop-and-up: 1440px;
+$for-desktop-big-and-up: 1800px;
+
+
+// ------------------------------------------------------------------------------------------------------------
+
+
+// ---------- GENERAL SETTINGS ----------
+//$body-background-color: $colorGrey;
+$body-background-color: white;
+
+
+// ---------- LINK COLORS ----------
+$link-color: $colorBrand;
+$link-color-hover: darken($link-color,20);
+$link-accent-color: $colorAccent;
+$link-accent-color-hover: darken($colorAccent,20);
+
+
+// ---------- CUSTOM ----------
+
+$hr-color: #ddd;
+$selection-color: $colorAccent;
+$img-selection-background-color: transparent;
+
+$box-shadow-small: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$box-shadow-medium: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$box-shadow-large: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);

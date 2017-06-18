@@ -1,0 +1,26 @@
+
+
+.logo{
+  display: inline-block;
+  //border: 1px solid magenta;
+  line-height: 1;
+  img{
+    height: 50px;
+  }
+}
+
+@include for-tablet-portrait-up(){
+
+  .logo{
+    margin: 20px auto 20px 20px;
+  }
+}
+@include for-desktop-up(){
+  .logo{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    img{
+      height: 80px;
+    }
+  }
+}

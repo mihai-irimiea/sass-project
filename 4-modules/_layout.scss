@@ -1,0 +1,76 @@
+
+
+.section{
+  position: relative;
+  padding: 35px 0;
+  .material-icons{
+    font-size: 36px;
+    color: $colorBrand;
+  }
+  .sub-heading {
+    margin: 0.3em 0;
+  }
+  p, blockquote{
+    text-align: justify;
+  }
+  &--grey {
+    background-color: $colorGrey;
+  }
+  &--bg {
+    background-color: rgba(0,0,0,0.2);
+    &:before{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url(/photos/shares/assets/office.jpg) no-repeat center;
+      background-size: cover;
+      z-index: -1;
+    }
+  }
+  &--services{
+    .card__body{
+      height: auto;
+    }
+  }
+  &--values{
+    .value{
+      padding: 20px;
+      border: 1px solid $colorAccent;
+      margin-bottom: 20px;
+      h4{
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+  }
+
+}
+
+@include for-tablet-portrait-up(){
+  .section{
+    padding: 100px 0;
+    .material-icons{
+      font-size: 48px;
+    }
+    &--values{
+      .values{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+      }
+      .value{
+        flex: 0 0 32%;
+        border: 1px solid $colorBrand;
+        background-color: $colorGrey;
+        margin-bottom: 20px;
+        h4{
+          text-align: center;
+        }
+      }
+    }
+  }
+
+}
